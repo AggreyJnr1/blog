@@ -1,11 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import home from './pages/home';
+
+//<Route exact path="/" component={home}/>
+
 
 function App() {
   return (
-    <div className="App">
-     My first app
+    <div className="App">                               
+   <Router>
+      <Switch>
+      <Route exact path="/" component={home}/>
+      </Switch>
+   </Router>
     </div>
   );
 }
